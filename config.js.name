@@ -1,0 +1,19 @@
+module.exports = {
+  name: 'Site',
+  description: 'Description your site',
+  domain: 'localhost',
+  url: 'http://localhost',
+  env: 'development',
+  port: 3000,
+
+  database: {
+    domain: 'localhost',
+    name: 'nameDb'
+  },
+
+  contact: {
+    service: "Gmail",
+    email: "",
+    password: ""
+  }
+}

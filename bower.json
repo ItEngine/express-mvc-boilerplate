@@ -1,0 +1,24 @@
+{
+  "name": "itengine",
+  "version": "0.0.1",
+  "description": "Página personal para el proyecto freelance.",
+  "main": "app.js",
+  "authors": [
+    "Martín Peveri"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mapeveri/ItEngine",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fetch": "~0.10.1",
+    "bootstrap": "^3.3.6",
+    "ng-admin": "^0.9.1"
+  }
+}

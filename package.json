@@ -1,0 +1,36 @@
+{
+  "name": "ArvemJs",
+  "version": "0.0.1",
+  "description": "Minimalist cms for Node.js.",
+  "main": "app.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
+  },
+  "keywords": [],
+  "author": "ItEngine/Martín Peveri",
+  "license": "MIT",
+  "dependencies": {
+    "angular2": "2.0.0-beta.3",
+    "body-parser": "^1.14.2",
+    "connect-mongo": "^1.1.0",
+    "cookie-parser": "^1.4.1",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.13.0",
+    "glob": "^6.0.4",
+    "mongoose": "^4.4.2",
+    "ng2-login-form": "^1.0.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "0.19.6",
+    "zone.js": "0.5.11"
+  },
+  "devDependencies": {
+    "typescript": "^1.7.5"
+  }
+}

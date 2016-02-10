@@ -1,0 +1,7 @@
+/node_modules
+/bower_components
+config.js
+/public/upload/*.xlsx
+/docs
+/public/boot.login.js
+/public/boot.login.js.map
