@@ -3,5 +3,5 @@
 config.js
 /public/upload/*.xlsx
 /docs
-/public/boot.login.js
-/public/boot.login.js.map
+/public/boot.js
+/public/boot.js.map
