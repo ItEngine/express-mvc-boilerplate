@@ -18,7 +18,6 @@
   ],
   "dependencies": {
     "fetch": "~0.10.1",
-    "bootstrap": "^3.3.6",
-    "ng-admin": "^0.9.1"
+    "bootstrap": "^3.3.6"
   }
 }

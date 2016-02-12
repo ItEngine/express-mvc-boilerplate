@@ -8,11 +8,8 @@ let User = new Schema({
     email: {type: String, required: true, index: { unique: true } },
     name: {type: String, required: true},
     surname: {type: String, required: true},
-    company: {type: String, required: true},
     password: {type: String, required: true},
-    is_admin: {type: Boolean},
-    payment: {type: Boolean},
-    expires: { type: Date, default: Date.now }
+    is_admin: {type: Boolean}
 });
 
 module.exports = mongoose.model('user', User);

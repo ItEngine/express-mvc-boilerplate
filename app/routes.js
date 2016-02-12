@@ -37,17 +37,4 @@ module.exports = function(){
   //Index login
   app.get("/", middlewareAuth.is_logging, controllers.index.main);
   app.post('/login', passport.authenticate('local', {successRedirect: '/admin/'}));
-
-  //Logout admin
-  app.route('/admin/logout').get(middlewareAuth.login_required, controllers.admin.index.logout);
-
-  /* Routes admin */
-
-  //Home
-  app.route('/admin').get(middlewareAuth.login_required, controllers.admin.index.main);
-  //Logout admin
-  app.route('/admin/logout').get(middlewareAuth.login_required, controllers.admin.index.logout);
-
-  /*Api routes*/
-  require("./api/routes")(app);
 }
