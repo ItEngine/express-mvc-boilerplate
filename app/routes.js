@@ -34,7 +34,13 @@ files.forEach(function(file) {
 
 // Routes of application
 module.exports = function(){
-  //Index login
-  app.get("/", middlewareAuth.is_logging, controllers.index.main);
-  app.post('/login', passport.authenticate('local', {successRedirect: '/admin/'}));
+  //Index
+  app.get("/", controllers.index.main);
+
+  //login
+  app.get("/login", middlewareAuth.is_logging, controllers.index.login);
+  app.post("/login", passport.authenticate('local', {successRedirect: '/admin/'}));
+
+  //Logout admin
+  app.route('/logout').get(middlewareAuth.login_required, controllers.index.logout);
 }

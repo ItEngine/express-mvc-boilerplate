@@ -16,6 +16,6 @@ Content
 -------
 
 1. Basic MVC structure to begin.
-2. Passport local-login, but without form.
+2. Passport local-login.
 3. Middlewares for authentication.
 4. Bootstrap, Angular2 and polyfill api fetch pre-installed.
