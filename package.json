@@ -19,6 +19,7 @@
     "es6-shim": "^0.33.3",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
+    "express-restify-mongoose": "^3.0.1",
     "express-session": "^1.13.0",
     "glob": "^6.0.4",
     "mongoose": "^4.4.2",

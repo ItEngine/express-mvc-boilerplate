@@ -64,6 +64,9 @@ require('./app/config/passport')(app);
 //Load routes
 require(path.join(process.cwd(), 'app', 'routes'))();
 
+//Config API REST
+require('./app/config/api')(app);
+
 //Listen server
 app.listen(app.get('settings').port, function() {
   console.log('Listening port: ' + app.get('settings').port)
