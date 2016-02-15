@@ -22,6 +22,7 @@
     "express-restify-mongoose": "^3.0.1",
     "express-session": "^1.13.0",
     "glob": "^6.0.4",
+    "method-override": "^2.3.5",
     "mongoose": "^4.4.2",
     "ng2-login-form": "^1.0.7",
     "passport": "^0.3.2",

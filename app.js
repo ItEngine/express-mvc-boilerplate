@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const methodOverride = require('method-override');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
@@ -27,6 +28,9 @@ app.locals.settings = app.get('settings');
 app.engine('.hbs', exphbs({ layoutsDir: "app/views/layouts", defaultLayout: 'main', extname: '.hbs' }));
 app.set('views', path.join(process.cwd(), 'app', 'views'));
 app.set('view engine', '.hbs');
+
+//Override with the X-HTTP-Method-Override header in the request
+app.use(methodOverride('X-HTTP-Method-Override'));
 
 //Cookies
 app.use(cookieParser());
