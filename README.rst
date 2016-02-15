@@ -15,7 +15,9 @@ Getting started
 Content
 -------
 
-1. Basic MVC structure to begin.
-2. Passport local-login.
-3. Middlewares for authentication.
-4. Bootstrap, Angular2 and polyfill api fetch pre-installed.
+1. Basic MVC structure to begin. Using MondoDB.
+2. Model **USER** integrate.
+3. Passport local-login. Using field 'email' of model user.
+4. Middlewares for authentication.
+5. API REST with **express-restify-mongoose**.
+6. Bootstrap, Angular2 and polyfill api fetch pre-installed.
