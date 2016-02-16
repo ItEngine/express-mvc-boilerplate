@@ -1,6 +1,6 @@
 /node_modules
 /bower_components
-config.js
+/app/config/config.js
 /public/upload/*.xlsx
 /docs
 /public/boot.js

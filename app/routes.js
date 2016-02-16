@@ -1,16 +1,10 @@
 'use strict'
 
 //All requires native nodejs
-const fs = require('fs');
 const path = require('path');
 
 //For get sync folder files controllers
 const glob = require('glob');
-//For authentication
-const passport = require('passport');
-
-//Middleware of authentication
-const middlewareAuth = require("./middlewares/auth");
 
 //My instance of app.js (this found because previosly export)
 const app = require(path.join(process.cwd(), 'app'));
@@ -34,13 +28,6 @@ files.forEach(function(file) {
 
 // Routes of application
 module.exports = function(){
-  //Index
-  app.get("/", controllers.index.main);
-
-  //login
-  app.get("/login", middlewareAuth.is_logging, controllers.index.login);
-  app.post("/login", passport.authenticate('local', {successRedirect: '/admin/'}));
-
-  //Logout admin
-  app.route('/logout').get(middlewareAuth.login_required, controllers.index.logout);
+  //Index Routes
+  require('./routes/index')(app, controllers);
 }
