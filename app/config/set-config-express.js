@@ -10,14 +10,16 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 
-var expressConfig = function(app){
+const helpers = require("../helpers/hbs/helpers");
+
+const expressConfig = function(app){
   //Set setting file config.js
   app.set('settings', require('./config'));
   //Export data config for used in tempate
   app.locals.settings = app.get('settings');
 
   // Configure express to use handlebars templates
-  app.engine('.hbs', exphbs({ layoutsDir: "app/views/layouts", defaultLayout: 'main', extname: '.hbs' }));
+  app.engine('.hbs', exphbs({ layoutsDir: "app/views/layouts", defaultLayout: 'main', extname: '.hbs', helpers: helpers }));
   app.set('views', path.join(process.cwd(), 'app', 'views'));
   app.set('view engine', '.hbs');
 

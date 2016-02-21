@@ -6,7 +6,7 @@ const passport = require('passport');
 //Middleware of authentication
 const middlewareAuth = require("../middlewares/auth");
 
-var routesIndex = function(app, controllers){
+const routesIndex = function(app, controllers){
 
   //Index
   app.get("/", controllers.index.main);
