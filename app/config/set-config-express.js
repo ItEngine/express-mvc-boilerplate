@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const favicon = require('serve-favicon');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const mongoose = require('mongoose');
@@ -37,6 +38,9 @@ const expressConfig = function(app){
       saveUninitialized: false,
       cookie: { maxAge: (24*3600*1000*30), expires: false}, // 30 Days in ms
   }));
+
+  //Favicon
+  app.use(favicon(path.join(process.cwd() + '/public/favicon.ico')));
 
   //Set folder static files
   app.use('/publics', express.static(process.cwd() + '/public'));
