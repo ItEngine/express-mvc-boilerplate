@@ -1,0 +1,39 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/publics/css/style.css")
+    block title
+      title Express-Mvc-Boilerplate
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+            span.sr-only .Toggle navigation
+            span.icon-bar
+            span.icon-bar
+          a(class="navbar-brand" href="/") Express MVC boilerplate
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+          ul.nav.navbar-nav.navbar-right
+    .container
+      block content
+
+      hr
+      footer.footer
+          p.
+            &copy; Express MVC boilerplate
+
+    script(src="/bower_components/fetch/fetch.js")
+    script(src="/node_modules/es6-shim/es6-shim.min.js")
+    script(src="/node_modules/systemjs/dist/system-polyfills.js")
+    script(src="/node_modules/angular2/bundles/angular2-polyfills.js")
+    script(src="/node_modules/systemjs/dist/system.src.js")
+    script(src="/node_modules/rxjs/bundles/Rx.js")
+    script(src="/node_modules/angular2/bundles/angular2.dev.js")
+
+    script(type='text/javascript').
+      #{ component }

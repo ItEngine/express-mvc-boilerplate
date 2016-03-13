@@ -21,6 +21,7 @@ Content
 4. Middlewares for authentication.
 5. API REST with **express-restify-mongoose**.
 6. Bootstrap, Angular2 and polyfill api fetch pre-installed.
+7. Use jade.
 
 For add new models to api
 -------------------------
