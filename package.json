@@ -1,14 +1,15 @@
 {
-  "name": "ArvemJs",
+  "name": "NAME_PACKAGE",
   "version": "0.0.1",
-  "description": "Minimalist cms for Node.js.",
+  "description": "DESCRIPTION_PACKAGE",
   "main": "app.js",
   "scripts": {
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "start": "node app.js"
   },
   "keywords": [],
-  "author": "ItEngine/Martín Peveri",
+  "author": "NAME_AUTHOR",
   "license": "MIT",
   "dependencies": {
     "angular2": "2.0.0-beta.3",
