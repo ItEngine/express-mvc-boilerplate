@@ -20,6 +20,9 @@ require(path.join(process.cwd(), 'app', 'routes'))();
 //Config API REST
 require('./app/config/api')(app);
 
+//Config admin penguin
+require('./app/config/config-penguin')(app);
+
 //Listen server
 app.listen(app.get('settings').port, function() {
   console.log('Listening port: ' + app.get('settings').port)

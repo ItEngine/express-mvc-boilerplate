@@ -8,7 +8,8 @@ let User = new Schema({
     email: {type: String, required: true, index: { unique: true } },
     name: {type: String, required: true},
     surname: {type: String, required: true},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+    isSuperAdmin: {type: Boolean, required: true}
 });
 
 module.exports = mongoose.model('user', User);

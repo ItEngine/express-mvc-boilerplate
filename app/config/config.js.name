@@ -1,6 +1,6 @@
 module.exports = {
-  name: 'Site',
-  description: 'Description your site',
+  name: 'Express-Mvc-Boilerplate',
+  description: 'Boilerplate MVC express',
   domain: 'localhost',
   url: 'http://localhost',
   env: 'development',

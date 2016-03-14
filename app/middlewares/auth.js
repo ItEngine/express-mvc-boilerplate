@@ -18,6 +18,15 @@ module.exports = {
     } else {
       next();
     }
+  },
+
+  //Check if is logging if is ok redirect to admin penguin
+  is_loggingPenguin: function(req, res, next){
+    if (req.isAuthenticated && req.isAuthenticated()) {
+      next();
+    } else {
+      res.redirect("/login");
+    }
   }
 
 }

@@ -16,7 +16,7 @@ const routesIndex = function(app, controllers){
   app.post("/login", passport.authenticate('local', {successRedirect: '/admin/'}));
 
   //Logout admin
-  app.route('/logout').get(middlewareAuth.login_required, controllers.index.logout);
+  app.route('/admin/logout').get(middlewareAuth.login_required, controllers.index.logout);
 
 }
 
