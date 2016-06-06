@@ -1,8 +1,6 @@
 'use strict';
 
 const path = require('path');
-
-//Init server express
 const express = require('express');
 const app = express();
 
@@ -24,6 +22,6 @@ require('./app/config/api')(app);
 require('./app/config/config-penguin')(app);
 
 //Listen server
-app.listen(app.get('settings').port, function() {
+app.listen(app.get('settings').port, () => {
   console.log('Listening port: ' + app.get('settings').port)
 });
