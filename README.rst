@@ -24,8 +24,8 @@ Content
 4. Middlewares for authentication.
 5. Admin generator using **Penguin** (This generate cruds automatic in base to folder models).
 6. API REST with **express-restify-mongoose**.
-7. Bootstrap, Angular2 and polyfill api fetch pre-installed.
-8. Use jade.
+7. Bootstrap and polyfill api fetch pre-installed.
+8. Use jade/pug.
 
 For add new models to api
 -------------------------
