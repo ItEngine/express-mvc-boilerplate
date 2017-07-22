@@ -1,41 +1,30 @@
 {
-  "name": "NAME_PACKAGE",
+  "name": "express-mvc-boilerplate",
   "version": "0.0.1",
-  "description": "DESCRIPTION_PACKAGE",
+  "private": true,
+  "description": "Boilerplate for express.js",
   "main": "app.js",
   "scripts": {
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
     "start": "node app.js"
   },
   "keywords": [],
-  "author": "NAME_AUTHOR",
+  "author": "ItEngine",
   "license": "MIT",
   "dependencies": {
-    "angular2": "2.0.0-beta.3",
-    "body-parser": "^1.14.2",
-    "connect-mongo": "^1.1.0",
-    "cookie-parser": "^1.4.1",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
-    "express": "^4.13.4",
-    "express-restify-mongoose": "^3.0.1",
-    "express-session": "^1.13.0",
+    "body-parser": "^1.17.2",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-restify-mongoose": "^3.2.1",
+    "express-session": "^1.15.4",
     "glob": "^6.0.4",
-    "jade": "^1.11.0",
-    "method-override": "^2.3.5",
-    "mongoose": "^4.4.2",
-    "ng2-login-form": "^1.0.7",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.3",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "penguin": "^0.3.5",
+    "pug": "^2.0.0-rc.2",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0",
-    "serve-favicon": "^2.3.0",
-    "systemjs": "0.19.6",
-    "zone.js": "0.5.11"
-  },
-  "devDependencies": {
-    "typescript": "^1.7.5"
+    "serve-favicon": "^2.4.3"
   }
 }

@@ -4,4 +4,11 @@ block content
   br
   center
     h4 Login
-  login-form(type_username_or_email="email" email="Email" send="Login" password="Password" frameworkCss="bootstrap" url="login")
+  form(method='POST' action='/login')
+    div.form-group
+      label(for='email') Email:
+      input#name.form-control(type='email', placeholder='Email' name='email')
+    div.form-group
+      label(for='email') Password:
+      input#email.form-control(type='password', placeholder='Password' name='password')
+    button.btn.btn-primary(type='submit') Login

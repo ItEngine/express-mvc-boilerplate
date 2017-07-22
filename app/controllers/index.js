@@ -24,24 +24,7 @@ class IndexController {
    */
    login (req, res) {
      try {
-        //Component contact-form
-        let component = `
-            System.config({
-              paths: {
-                  'ng2-login-form/*': 'node_modules/ng2-login-form/*.js',
-              },
-              packages: {
-                publics: {
-                  format: 'register',
-                  defaultExtension: 'js'
-                }
-              }
-            });
-            System.import('publics/boot')
-              .then(null, console.error.bind(console));
-        `;
-
-        return res.render('login', {component: component});
+        return res.render('login');
       } catch (e) {
         return res.render("500");
       }
