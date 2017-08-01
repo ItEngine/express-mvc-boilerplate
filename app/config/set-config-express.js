@@ -23,9 +23,9 @@ module.exports = (app) => {
       //Export data config for used in tempate
       app.locals.settings = app.get('settings');
 
-      // Configure express to use jade templates
+      // Configure express to use jade/pug templates
       app.set('views', path.join(process.cwd(), 'app', 'views'));
-      app.set('view engine', 'jade');
+      app.set('view engine', 'pug');
 
       //Override with the X-HTTP-Method-Override header in the request
       app.use(methodOverride('X-HTTP-Method-Override'));
