@@ -1,9 +1,13 @@
 extends layouts/main.pug
 
 block content
-	.jumbotron
-		h1 Welcome
-		p.
-			This example is template default for express-mvc-boilerplate.
-		p
-			a(class="btn btn-lg btn-primary" href="/login") Login
+  .jumbotron
+    h1 Welcome
+    p.
+      This example is template default for express-mvc-boilerplate.
+    if login
+      form(method='POST' action='/admin/logout')
+        button.btn.btn-primary(type='submit') Logout
+    else
+      p
+        a(class="btn btn-primary" href="/login") Login

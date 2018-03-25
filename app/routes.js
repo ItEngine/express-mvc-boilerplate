@@ -1,18 +1,18 @@
-'use strict'
-
-//All requires native nodejs
+// All requires native nodejs
 const path = require('path');
-//For get sync folder files controllers
+// For get sync folder files controllers
 const glob = require('glob');
-//My instance of app.js (this found because previosly export)
-const app = require(path.join(process.cwd(), 'app'));
+// My instance of app.js (this found because previosly export)
+const app = require('../app');
 
-//Load arrays with require controllers
-let controllers = {};
-let files = glob.sync(path.join(process.cwd(), 'app', 'controllers', '**', '*.js'));
+// Get controllers
+const controllers = {};
+const files = glob.sync(path.join(process.cwd(), 'app', 'controllers', '**', '*.js'));
+
+// Loop and load controllers
 files.forEach((file) => {
   let temp = controllers;
-  let parts = path.relative(path.join(process.cwd(), 'app', 'controllers'), file).slice(0, -3).split(path.sep);
+  const parts = path.relative(path.join(process.cwd(), 'app', 'controllers'), file).slice(0, -3).split(path.sep);
 
   while (parts.length) {
     if (parts.length === 1) {
@@ -25,7 +25,4 @@ files.forEach((file) => {
 });
 
 // Routes of application
-module.exports = () => {
-  //Index Routes
-  require('./routes/index')(app, controllers);
-}
+require('./routes/index')(app, controllers);

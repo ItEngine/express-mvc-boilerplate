@@ -1,23 +1,19 @@
-'use strict'
-
 const express = require('express');
 const restify = require('express-restify-mongoose');
-const router = express.Router();
-const User = require("../models/user.js");
+const User = require('../models/user.js');
 
-module.exports = (app) => {
-  /*
-  @class ApiConfig
-  @descrip: Init configuration API/REST with restify 
-  */
-  new class ApiConfig {
-    
-    constructor () {
-      //Add all models, get starter with User
-      restify.serve(router, User);
-      app.use(router);
-    }
-    
+const router = express.Router();
+
+/**
+* @class ApiConfig
+* @description Init configuration API/REST with restify
+*/
+class ApiConfig {
+  constructor(app) {
+    // Add all models, get starter with User
+    restify.serve(router, User);
+    app.use(router);
   }
 }
 
+module.exports = app => new ApiConfig(app);

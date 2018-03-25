@@ -1,39 +1,32 @@
-'use strict';
-
 const passport = require('passport');
-const middlewareAuth = require("../middlewares/auth");
+const middlewareAuth = require('../middlewares/auth');
 
-module.exports = (app, controllers) => {
-  /*
-  @class RoutesConfig
-  @descrip: Set routes app
-  */
-  new class RoutesConfig {
-    
-    constructor () {
-      //Routes authentication
-      this.authentication();
-    }
-    
-    /*
-    @method: authentication
-    @descrip: Routes/authentication
-    */
-    authentication () {
-      let index = controllers.index;
-      //Index
-      app.get("/", index.main.bind(index));
+/**
+* @class RoutesConfig
+* @description Set routes app
+*/
+class RoutesConfig {
+  constructor(app, controllers) {
+    const { index } = controllers;
+    // Index
+    app.get('/', index.main.bind(index));
 
-      //login
-      app.get("/login", middlewareAuth.is_logging, index.login.bind(index));
-      app.post("/login", passport.authenticate('local', {successRedirect: '/admin/'}));
+    // login
+    app.get('/login', middlewareAuth.isLogging, index.login.bind(index));
+    app.post('/login', passport.authenticate('local', { successRedirect: '/admin/' }));
 
-      //Logout admin
-      app.route('/admin/logout').get(
-        middlewareAuth.login_required, 
-        index.logout.bind(index)
-      );
-    }
-    
+    // Logout for admin
+    app.route('/admin/logout').get(
+      middlewareAuth.loginRequired,
+      index.logout.bind(index),
+    );
+
+    // Logout
+    app.route('/admin/logout').post(
+      middlewareAuth.loginRequired,
+      index.logout.bind(index),
+    );
   }
 }
+
+module.exports = (app, controllers) => new RoutesConfig(app, controllers);

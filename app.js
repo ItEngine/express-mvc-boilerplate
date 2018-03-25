@@ -1,27 +1,28 @@
-'use strict';
-
-const path = require('path');
 const express = require('express');
+
+
+// Create app
 const app = express();
 
-require('./app/config/set-config-express')(app);
+// Express configuration server
+require('./app/config/express-config')(app);
 
-//Passport config
+// Passport config
 require('./app/passport/passport-config')(app);
 
-//Export my instance app for used in other files
-module.exports = app;
-
-//Load routes
-require(path.join(process.cwd(), 'app', 'routes'))();
-
-//Config API REST
+// Config API REST
 require('./app/config/api')(app);
 
-//Config admin penguin
-require('./app/config/config-penguin')(app);
+// Export my instance app for used in other files
+module.exports = app;
 
-//Listen server
+// Load routes
+require('./app/routes');
+
+// Config admin
+require('./app/config/admin-config');
+
+// Listen server
 app.listen(app.get('settings').port, () => {
-  console.log('Listening port: ' + app.get('settings').port)
+  console.log(`Listening port: ${app.get('settings').port}`);
 });

@@ -8,12 +8,12 @@ module.exports = {
 
   database: {
     domain: 'localhost',
-    name: 'nameDb'
+    name: 'example',
   },
 
   contact: {
-    service: "Gmail",
-    email: "",
-    password: ""
-  }
-}
+    service: 'Gmail',
+    email: '',
+    password: '',
+  },
+};
